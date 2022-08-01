@@ -4,7 +4,6 @@ import { IProduct } from "./product";
 import { ProductService } from "./product.service";
 
 @Component({
-	selector: "pm-products",
 	templateUrl: "./product-list.component.html",
 	styleUrls: ['./product-list.component.css']
 })
@@ -19,7 +18,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 	imageMargin: number = 2;
 	showImage: boolean = false;
 	products: IProduct[] = [];
-	errorMesage: string = "";
+	errorMessage: string = "";
 	sub!: Subscription;
 
 	private _listFilter: string = '';
@@ -48,7 +47,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
 					this.products = products;
 					this.filteredProducts = this.products;
 				},
-				error: err => this.errorMesage = err
+				error: err => this.errorMessage = err
 			});
 	}
 	ngOnDestroy(): void {
