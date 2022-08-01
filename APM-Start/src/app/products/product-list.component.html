@@ -47,9 +47,9 @@
                    alt="">
             </td>
             <td>
-              <p [routerLink]="['/products', product.productId]">
+              <a [routerLink]="['/products', product.productId]">
                 {{product.productName}}
-              </p>
+              </a>
             </td>
             <td>{{product.productCode | lowercase | convertToSpaces:'-'}}</td>
             <td>{{product.releaseDate}}</td>
